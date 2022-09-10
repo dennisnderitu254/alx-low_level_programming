@@ -7,24 +7,25 @@
  */
 int main(void)
 {
-	int digit1, digit2, digit3;
+	int hund;
+	int tens;
+	int ones;
 
-	for (digit1 = 0; digit1 < 9; digit2++)
+	for (hund = 0; hund <= 9; hund++)
 	{
-		for (digit2 = digit1 + 1; digit2 < 9; digit2++)
+		for (tens = hund + 1; tens <= 9; tens++)
 		{
-			for (digit3 = digit2 + 1; digit3 < 10; digit3++)
+			for (ones = tens + 1; ones <= 9; ones++)
 			{
+				putchar(hund + '0');
+				putchar(tens + '0');
+				putchar(ones + '0');
 
-				putchar((digit1 % 10) + '0');
-				putchar((digit2 % 10) + '0');
-				putchar((digit3 % 10) + '0');
-
-				if (digit1 == 7 && digit2 ==8 && digit3 ==9)
-					continue;
-
-				putchar(',');
-				putchar(',');
+				if (hund < 7)
+				{
+					putchar(',');
+					putchar(',');
+				}
 			}
 		}
 	}

@@ -24,7 +24,7 @@ int main(void)
 				if (hund < 7)
 				{
 					putchar(',');
-					putchar(',');
+					putchar(' ');
 				}
 			}
 		}

@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /**
  *main - program that prints either number
@@ -14,7 +15,7 @@ int main(void)
 	printf("%d", n);
 	for (n = 2; n <= 100; n++)
 	{
-		if ((n % 3 == 0) && (n & 5 ==))
+		if ((n % 3 == 0) && (n & 5 == 0))
 		{
 			printf("FizzBuzz");
 		}

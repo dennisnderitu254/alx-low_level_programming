@@ -1,52 +1,78 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
-*print_buffer -  C function that prints the content of an
-*  inputted number of bytes from a buffer.
-* Prints 10 bytes per line.
-* Starts with the position of the first byte in hexadecimal (8 chars),
-* starting with `0`.
-* Each line shows the hexadecimal content (2 chars) of the buffer,
-* 2 bytes at a time, separated by a space.
-* Each line shows the content of the buffer.
-* Prints the byte if it is printable; if not, prints `.`.
-* Each line ends with a new line `\n`.
-* If the inputted byte size is 0 or less, the function only prints a new line.
-*@b: number of bytes
-*@size: size of the byte
-*/
+ * isPrintableASCII - determines if n is a printable ASCII char
+ * @n: integer
+ * Return: 1 if true, 0 if false
+ */
+int isPrintableASCII(int n)
+{
+	return (n >= 32 && n <= 126);
+}
+
+/**
+ * printHexes - print hex values for string b in formatted form
+ * @b: string to print
+ * @start: starting position
+ * @end: ending position
+ */
+void printHexes(char *b, int start, int end)
+{
+	int i = 0;
+
+	while (i < 10)
+	{
+		if (i < end)
+			printf("%02x", *(b + start + i));
+		else
+			printf("  ");
+		if (i % 2)
+			printf(" ");
+		i++;
+	}
+}
+
+/**
+ * printASCII - print ascii values for string b,
+ * formatted to replace nonprintable chars with '.'
+ * @b: string to print
+ * @start: starting position
+ * @end: ending position
+ */
+void printASCII(char *b, int start, int end)
+{
+	int ch, i = 0;
+
+	while (i < end)
+	{
+		ch = *(b + i + start);
+		if (!isPrintableASCII(ch))
+			ch = 46;
+		printf("%c", ch);
+		i++;
+	}
+}
+
+/**
+ * print_buffer - prints a buffer
+ * @b: string
+ * @size: size of buffer
+ */
 void print_buffer(char *b, int size)
 {
-	int i = 0, j;
+	int start, end;
 
-	if (size < 0)
+	if (size > 0)
 	{
-		printf('\n');
-		return;
-	}
-
-	while (i < size)
-	{
-		if (i % 10 == 0)
-			printf("%08x: ", i);
-		for (j = i; j < i + 9; j += 2)
+		for (start = 0; start < size; start += 10)
 		{
-			if ((j < size) && ((j + 1) < size))
-				printf("%02x%02x: ", b[j], b[j + 1]);
-			else
-			{
-				while (++j <= i + 10)
-					printf(" ");
-				printf(" ");
-			}
+			end = (size - start < 10) ? size - start : 10;
+			printf("%08x: ", start);
+			printHexes(b, start, end);
+			printASCII(b, start, end);
+			printf("\n");
 		}
-		for (j = i; j < i + 9 && j < size; j++)
-		{
-			if (b[j] >= 32 && b[j] <= 126)
-				printf("%c", b[j]);
-			else
-				printf(".");
-		}
-		printf('\n');
-		i += 10;
-	}
+	} else
+		printf("\n");
 }

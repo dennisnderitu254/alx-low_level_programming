@@ -22,5 +22,6 @@ printf("[0] (nil)\n");
 count += 1;
 cursor = cursor->next;
 }
+
 return (count);
 }

@@ -1,5 +1,7 @@
 #include <elf.h>
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 #define REV(n) ((n << 24) | (((n >> 16) << 24) >> 16) | \
 (((n << 16) >> 24) << 16) | (n >> 24))
 /**

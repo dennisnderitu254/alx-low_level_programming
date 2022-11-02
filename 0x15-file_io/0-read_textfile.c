@@ -9,39 +9,23 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t nletters;
-	int file;
-	char *text;
+	int fd, readed;
+	char *buff = malloc(sizeof(char *) * letters);
+
+	if (!buff)
+		return (0);
 
 	if (!filename)
 		return (0);
-	text = malloc(sizeof(char) * letters + 1);
-	if (text == NULL)
+
+	fd = open(filename, O_RDONLY, 0600);
+	if (fd == -1)
 		return (0);
-	file = open(filename, O_RDONLY);
-	if (file == -1)
-	{
-		free(text);
-		return (0);
-	}
-	nletters = read(file, text, sizeof(char) * letters);
-	if (nletters == -1)
-	{
-		free(text);
-		close(file);
-		return (0);
-	}
-	nletters = write(STDOUT_FILENO, text, nletters);
-	if (nletters == -1)
-	{
-		free(text);
-		close(file);
-		return (0);
-	}
-	free(text);
-	close(file);
-	return (nletters);
+
+	readed = read(fd, buff, letters);
+	write(STDOUT_FILENO, buff, readed);
+
+	free(buff);
+	close(fd);
+	return (readed);
 }
-
-
-

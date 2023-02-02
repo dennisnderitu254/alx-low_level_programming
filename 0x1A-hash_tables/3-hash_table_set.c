@@ -9,6 +9,12 @@
  * Return: Upon failure - 0.
  *         Otherwise - 1.
  */
+/*
+1. If the hash table, key, or value is NULL, return 0.
+2. If the key already exists, update the value and return 1.
+3. If the key doesn’t exist, create a new node and add it to the hash table.
+4. Return 1.
+*/
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *new;

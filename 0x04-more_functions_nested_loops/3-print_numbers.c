@@ -4,6 +4,12 @@
  *
  *Return: returns nothing
  */
+/*
+1. Declare a variable called number and initialize it to 48.
+2. Use a for loop to iterate through the numbers 48 to 57.
+3. Print the current number.
+4. Print a new line.
+*/
 void print_numbers(void)
 {
 int number = 48;

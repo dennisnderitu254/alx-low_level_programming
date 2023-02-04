@@ -7,6 +7,10 @@
  *
  * Return: int
  */
+/*
+1. If the character is between 97 and 122, then it is a lowercase letter.
+2.  If the character is not between 97 and 122, then it is not a lowercase letter.
+*/
 int _islower(int c)
 {
 	if (c >= 97 && c <= 122)

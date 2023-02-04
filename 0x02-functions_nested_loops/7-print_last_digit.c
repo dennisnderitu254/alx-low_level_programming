@@ -7,6 +7,13 @@
  * description : prints out the last digit of a value
  * Return: a
  */
+/*
+1. If a is less than 0, then a = -(a % 10)
+2. If a is greater than 0, then a = a % 10
+3. If a is equal to 0, then a = 0
+4. Print the last digit of a
+5. Return the last digit of a
+*/
 int print_last_digit(int a)
 {
 	if (a < 0)

@@ -5,6 +5,11 @@
  * followed by a new lin
  * @n: print from this number
  */
+/*
+1. If the number is less than 98, it will print all the numbers from the given number to 98.
+2. If the number is greater than 98, it will print all the numbers from the given number to 98.
+3. If the number is equal to 98, it will print 98.
+*/
 void print_to_98(int n)
 {
 

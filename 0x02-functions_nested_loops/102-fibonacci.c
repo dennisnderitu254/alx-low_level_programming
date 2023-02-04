@@ -5,6 +5,12 @@
  *
  * Return: 0
  */
+/*
+1. Declare variables
+2. Initialize variables
+3. Loop through the fibonacci sequence
+4. Print the fibonacci sequence
+*/
 int main(void)
 {
 	int i, l;

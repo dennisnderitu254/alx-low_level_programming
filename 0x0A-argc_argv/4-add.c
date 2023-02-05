@@ -8,6 +8,14 @@
 *Return: 0 on success, 1 on failure
 */
 
+/*
+1. The main function takes in the number of arguments and an array of strings.
+2. The first for loop iterates through the arguments.
+3. The second for loop iterates through each character of the argument.
+4. If the character is not a digit, the program prints “Error” and returns 1.
+5. If the character is a digit, the program adds the number to the sum.
+6. The program prints the sum and returns 0.
+*/
 int main(int argc, char *argv[])
 {
 	int i, j, sum = 0;

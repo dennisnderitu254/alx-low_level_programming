@@ -4,6 +4,11 @@
  * @size: numbers of lines.
  * Return: no return.
  */
+/*
+1. If the size is less than or equal to 0, print a new line.
+2. For each row, print the number of spaces needed, then print the number of # symbols needed.
+3. Print a new line after each row.
+*/
 void print_triangle(int size)
 {
 	int row, column, x;

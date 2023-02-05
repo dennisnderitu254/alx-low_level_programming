@@ -5,6 +5,11 @@
  * @n: input integer.
  * Return: no return.
  */
+/*
+1. If the number is negative, print a minus sign and make the number positive.
+2. Find the number of digits in the number.
+3. Print the number.
+*/
 void print_number(int n)
 {
 	unsigned int m, d, count;

@@ -13,6 +13,9 @@
 3. Inside the while loop, call the _putchar function to print the current character.
 4. After the while loop, print a new line.
 */
+/*
+Time Complexity: O(n)
+*/
 void _puts(char *str)
 {
 	while (*str)

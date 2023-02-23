@@ -11,7 +11,8 @@ def island_perimeter(grid):
         The perimeter of the island defined in grid.
     """
     # 1. We first find the width and height of the grid.
-    # 2. We then iterate through the grid and find the number of edges and the number of nodes.
+    # 2. We then iterate through the grid and find the number of edges and the
+    # number of nodes.
     # 3. We then return the number of nodes * 4 - number of edges * 2.
     # Time Complexity: O(n^2)
     width = len(grid[0])

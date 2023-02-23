@@ -9,7 +9,7 @@ all: $(OBJ)
 		$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
-		$(RM) -rf *~ $(NAME)
+		$(RM)*~ $(NAME)
 
 oclean:
 		$(RM) $(OBJ)

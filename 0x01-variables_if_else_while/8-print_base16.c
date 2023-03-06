@@ -5,6 +5,8 @@
  *
  * Return: returns 0
  *
+ * FUNCTONALITY *
+ *
  * 1. We declare a variable called digit and initialize it to 0.
  * 2. We start a for loop that will run as long as digit is less than or equal to 9.
  * 3. We print the value of digit.

@@ -4,6 +4,15 @@
  *
  * Return: Always 0 (Success)
  *
+ * FUNCTIONALITY *
+ *
+ * 1. We are printing the size of a char using the sizeof() operator.
+ * 2. We are printing the size of an int using the sizeof() operator.
+ * 3. We are printing the size of a long int using the sizeof() operator.
+ * 4. We are printing the size of a long long int using the sizeof() operator.
+ * 5. We are printing the size of a float using the sizeof() operator.
+ *
+ * Time Complexity: O(1)
  */
 int main(void)
 {

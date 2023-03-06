@@ -5,6 +5,16 @@
  * main - Prints the last digit of random number
  *
  * Return: Return 0
+ *
+ * FUNCTIONALITY *
+ *
+ * 1. It’s generating a random number using the rand() function.
+ *
+ * 2. It’s storing the last digit of the random number in the variable last.
+ *
+ * 3. It’s printing the last digit of the random number.
+ *
+ * Time Complexity: O(1)
  */
 int main(void)
 {

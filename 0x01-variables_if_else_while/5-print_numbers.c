@@ -5,6 +5,8 @@
  *
  * Return: return 0
  *
+ * FUNCTIONALITY *
+ *
  * 1. Declare a variable called digit of type int.
  *
  * 2. Initialize the variable digit to the character ‘0’.

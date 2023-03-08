@@ -7,6 +7,7 @@
  *
  * Return:+ if positive, 0 if zero and - if negative
  *
+ *
  * FUNCTIONALITY *
  *
  * 1. If n is greater than 0, print + and return 1.
@@ -15,8 +16,16 @@
  *
  * Time Complexity: O(1)
  *
- */
+ *
+ * DOCSTRING *
+ *
+ * If n is greater than 0, print a plus sign and return 1. If n is less than 0, print a minus sign and return -1. If n is 0, print a zero and return 0.
 
+ * Args:
+	n: The number to be checked
+ * Returns:
+	The function is returning the sign of the number.
+*/
 int print_sign(int n)
 {
 	if (n > 0)

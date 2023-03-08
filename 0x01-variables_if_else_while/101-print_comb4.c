@@ -4,6 +4,22 @@
  * and space followed by new line
  *
  * Return: returns 0
+ *
+ * FUNCTIONALITY *
+ *
+ * 1. The outermost for loop is for the hundreds digit.
+ *
+ * 2. The middle for loop is for the tens digit.
+ *
+ * 3. The innermost for loop is for the ones digit.
+ *
+ * 4. The if statement is to prevent the comma and space from being printed after the last number.
+ *
+ * 5. The putchar() function is used to print the digits.
+ *
+ * 6. The '0' is added to the digit to get the ASCII code for the digit.
+ *
+ * Time Complexity: O(n^3)
  */
 int main(void)
 {

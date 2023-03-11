@@ -4,13 +4,17 @@
  * main - Prints first 50 numbers of the fibonacci sequence
  *
  * Return: 0
+ *
+ * FUNCTIONALITY *
+ *
+ * 1. Declare variables
+ * 2. Initialize variables
+ * 3. Loop through the fibonacci sequence
+ * 4. Print the fibonacci sequence
+ *
+ * Time Complexity: O(n)
  */
-/*
-1. Declare variables
-2. Initialize variables
-3. Loop through the fibonacci sequence
-4. Print the fibonacci sequence
-*/
+
 int main(void)
 {
 	int i, l;
@@ -25,7 +29,8 @@ int main(void)
 		if (i == 49)
 		{
 			printf("%lu", n1);
-		} else
+		}
+		else
 		{
 			printf("%lu, ", n1);
 			next = n1 + n2;

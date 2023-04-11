@@ -336,9 +336,9 @@ Therefore, the space complexity of this algorithm is proportional to the product
 - Directory: `0x1E-search_algorithms`
 - File: `6-O`
 
-### 7\. Jump search
-
 # advanced
+
+### 7\. Jump search
 
 Score: 0.00% (Checks completed: 0.00%)
 
@@ -405,6 +405,18 @@ Found 999 at index: -1
 
 ```
 
+```
+Explanation:
+The function takes the sorted integer array, the size of the array, and the value to search as input parameters. It starts by checking if the array is NULL, and returns -1 if it is. Then, it sets the jump step as the square root of the size of the array, and initializes the left and right pointers.
+
+The while loop is used to move the right pointer forward in jumps of size jump until it finds an element that is greater than or equal to the value we are searching for or until it reaches the end of the array. Inside the loop, it also prints the indices of the array that are being checked.
+
+After the loop, it checks if the right pointer has gone beyond the bounds of the array and adjusts it if necessary. Then, it searches for the value in the range [left, right] using a for loop, and returns the index if it is found. If the value is not found, it prints a message saying so and returns -1.
+
+Finally, in the main function, we create an integer array, get its size, and call the jump_search function with different values to test it.
+
+```
+
 **Repo:**
 
 - GitHub repository: `alx-low_level_programming`
@@ -427,11 +439,11 @@ What is the `time complexity` (average case) of a jump search in an array of s
 - Directory: `0x1E-search_algorithms`
 - File: `101-O`
 
- Done? Help Check your code Ask for a new correction QA Review
+Done? Help Check your code Ask for a new correction QA Review
 
 ### 9\. Interpolation search
 
-# advanced
+### advanced
 
 Score: 0.00% (Checks completed: 0.00%)
 

@@ -433,6 +433,16 @@ Score: 0.00% (Checks completed: 0.00%)
 
 What is the `time complexity` (average case) of a jump search in an array of size `n`, using `step = sqrt(n)`?
 
+```
+The time complexity (average case) of a jump search algorithm in an array of size n, using step = sqrt(n), is O(sqrt(n)).
+
+The while loop in the algorithm takes O(sqrt(n)) time because it makes at most sqrt(n) iterations, and each iteration involves a constant amount of work. Then, the for loop that searches for the value in the range [left, right] takes at most O(sqrt(n)) time, because the size of the range is at most sqrt(n). Therefore, the overall time complexity is O(sqrt(n)).
+
+Since the jump search algorithm requires the array to be sorted, we can assume that the array is sorted in ascending order, which allows the algorithm to make the jumps of size sqrt(n). This step size is chosen because it strikes a balance between the number of steps required to reach the target value and the number of comparisons required at each step.
+
+Compared to a linear search, the jump search algorithm can significantly reduce the number of comparisons required to find a value in a sorted array, especially for large arrays. However, for smaller arrays, the overhead of the algorithm may outweigh its benefits, and a linear search may be faster.
+```
+
 **Repo:**
 
 - GitHub repository: `alx-low_level_programming`

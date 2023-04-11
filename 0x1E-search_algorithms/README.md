@@ -211,6 +211,12 @@ Score: 0.00% (Checks completed: 0.00%)
 
 What is the `time complexity` (worst case) of a linear search in an array of size `n`?
 
+```
+The time complexity of a linear search in an array of size n is O(n) in the worst case. This is because in the worst case scenario, the element being searched for is at the end of the array, or not present in the array at all, and the algorithm must compare the target element with every element in the array before terminating. As the size of the array grows, the number of comparisons required by the algorithm grows linearly, which results in a linear time complexity.
+
+In other words, the worst-case scenario for a linear search occurs when the target element is not present in the array, and the algorithm has to iterate through all n elements of the array before concluding that the element is not present. In this scenario, the number of comparisons required is proportional to n, and the time complexity is O(n).
+```
+
 **Repo:**
 
 - GitHub repository: `alx-low_level_programming`
@@ -233,6 +239,14 @@ What is the `space complexity` (worst case) of an iterative linear search algo
 - Directory: `0x1E-search_algorithms`
 - File: `3-O`
 
+```
+The space complexity (worst case) of an iterative linear search algorithm in an array of size n is O(1). This is because the algorithm does not require any additional space other than the space required to store the input array and a few constant variables used by the algorithm.
+
+In the iterative linear search algorithm, we start searching for the target element from the beginning of the array and compare it with each element of the array one by one until we find a match or reach the end of the array. During the search, we do not use any extra space that depends on the size of the input array, and the space required by the algorithm remains constant.
+
+Therefore, the space complexity of an iterative linear search algorithm is independent of the size of the input array and is O(1) in the worst case.
+```
+
  Done? Help Check your code Ask for a new correction QA Review
 
 ### 4\. Big O #2
@@ -249,6 +263,14 @@ What is the `time complexity` (worst case) of a binary search in an array of s
 - Directory: `0x1E-search_algorithms`
 - File: `4-O`
 
+```
+The time complexity (worst case) of a binary search in an array of size n is O(log n). This is because in each step of the binary search algorithm, the size of the array to be searched is halved. This means that after the first comparison, we only need to search half of the array, after the second comparison, we only need to search a quarter of the array, and so on.
+
+This results in a logarithmic time complexity. In the worst case scenario, the element being searched for is not present in the array, and the algorithm has to continue dividing the array until the size of the remaining subarray becomes 0. This requires a maximum of log n comparisons to be made, hence the time complexity of O(log n).
+
+Binary search is an efficient search algorithm for sorted arrays, as it reduces the number of comparisons required to find the target element as compared to a linear search algorithm which has a time complexity of O(n) in the worst case.
+```
+
  Done? Help Check your code Ask for a new correction QA Review
 
 ### 5\. Big O #3
@@ -264,6 +286,16 @@ What is the `space complexity` (worst case) of a binary search in an array of 
 - GitHub repository: `alx-low_level_programming`
 - Directory: `0x1E-search_algorithms`
 - File: `5-O`
+
+```
+The space complexity (worst case) of a binary search in an array of size n is O(1). This is because the binary search algorithm does not require any additional space that depends on the size of the input array.
+
+The binary search algorithm works by iteratively dividing the array into two halves, and updating the search range accordingly. The algorithm only requires a few constant variables to keep track of the search range and the position of the target element relative to the middle element of the array.
+
+Since the space required by the algorithm remains constant regardless of the size of the input array, the space complexity of the binary search algorithm is O(1) in the worst case.
+
+Therefore, binary search is both a time and space-efficient algorithm for searching elements in a sorted array.
+```
 
  Done? Help Check your code Ask for a new correction QA Review
 
@@ -288,6 +320,14 @@ int **allocate_map(int n, int m)
      return (map);
 }
 
+```
+
+```
+The space complexity of the allocate_map function is O(nm), where n is the number of rows and m is the number of columns in the 2D matrix or map being created.
+
+The function allocates memory for a 2D matrix or map using dynamic memory allocation in C. It allocates space for an array of n integer pointers using malloc(sizeof(int *) * n), and then allocates space for each row of the matrix using malloc(sizeof(int) * m) inside a loop that runs n times.
+
+Therefore, the space complexity of this algorithm is proportional to the product of the number of rows and columns in the matrix being created, and hence O(nm).
 ```
 
 **Repo:**

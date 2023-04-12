@@ -19,8 +19,8 @@
  * If it is, we return -1.
  * Otherwise, we initialize the low and high indices of the search range.
  *
- * The main loop of the function continues as long as the search r
- * ange is non-empty
+ * The main loop of the function continues as long as the search
+ * range is non-empty
  * and the value we're searching for is within the range.
  * In each iteration of the loop,
  * we calculate the probe position using the formula given in the prompt.
